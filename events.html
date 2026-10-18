@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events | AdmitOne</title>
+  <meta name="description" content="Browse upcoming concerts, comedy, food festivals, film and conferences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>AdmitOne</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html" aria-current="page">Events</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-small" href="events.html">Browse events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero on-dark">
+      <div class="container">
+        <h1>Upcoming events</h1>
+        <p>Pick a category or scroll through everything on sale right now.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Filter buttons: data-filter must match the data-category on each card -->
+        <div class="filters" role="group" aria-label="Filter events by category">
+          <button class="filter" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter" data-filter="Music" aria-pressed="false">Music</button>
+          <button class="filter" data-filter="Comedy" aria-pressed="false">Comedy</button>
+          <button class="filter" data-filter="Food" aria-pressed="false">Food</button>
+          <button class="filter" data-filter="Film" aria-pressed="false">Film</button>
+          <button class="filter" data-filter="Conference" aria-pressed="false">Conference</button>
+        </div>
+
+        <div class="grid" id="event-grid">
+
+          <article class="ticket" data-category="Music">
+            <div class="ticket-top notch-b c1"><span class="date"><b>14</b>Nov</span><span class="chip">Music</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Rooftop Sessions: Live Jazz</h3>
+              <p class="meta">Skyline Terrace, doors 7:00 pm</p>
+              <div class="ticket-foot"><span class="price">From $25</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Conference">
+            <div class="ticket-top notch-b c3"><span class="date"><b>19</b>Nov</span><span class="chip">Conference</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Founders &amp; Funders Summit</h3>
+              <p class="meta">Grand Hall, registration 9:00 am</p>
+              <div class="ticket-foot"><span class="price">From $60</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Comedy">
+            <div class="ticket-top notch-b c2"><span class="date"><b>20</b>Nov</span><span class="chip">Comedy</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Comedy Night: Unfiltered</h3>
+              <p class="meta">The Laugh Room, doors 8:00 pm</p>
+              <div class="ticket-foot"><span class="price">From $18</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Food">
+            <div class="ticket-top notch-b c5"><span class="date"><b>28</b>Nov</span><span class="chip">Food</span></div>
+            <div class="ticket-body notch-t">
+              <h3>City Food Festival</h3>
+              <p class="meta">Riverside Park, gates 11:00 am</p>
+              <div class="ticket-foot"><span class="price">From $12</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Film">
+            <div class="ticket-top notch-b c4"><span class="date"><b>06</b>Dec</span><span class="chip">Film</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Indie Film Weekend</h3>
+              <p class="meta">Cinema Hall, first screening 2:00 pm</p>
+              <div class="ticket-foot"><span class="price">From $15</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Music">
+            <div class="ticket-top notch-b c3"><span class="date"><b>12</b>Dec</span><span class="chip">Music</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Neon Nights Festival</h3>
+              <p class="meta">Arena Grounds, gates 4:00 pm</p>
+              <div class="ticket-foot"><span class="price">From $45</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Conference">
+            <div class="ticket-top notch-b c1"><span class="date"><b>16</b>Dec</span><span class="chip">Conference</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Design Futures Workshop</h3>
+              <p class="meta">Studio 9, starts 10:00 am</p>
+              <div class="ticket-foot"><span class="price">From $35</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Comedy">
+            <div class="ticket-top notch-b c4"><span class="date"><b>18</b>Dec</span><span class="chip">Comedy</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Stand-up Showcase</h3>
+              <p class="meta">The Laugh Room, doors 8:00 pm</p>
+              <div class="ticket-foot"><span class="price">From $20</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+          <article class="ticket" data-category="Food">
+            <div class="ticket-top notch-b c2"><span class="date"><b>20</b>Dec</span><span class="chip">Food</span></div>
+            <div class="ticket-body notch-t">
+              <h3>Winter Street Eats</h3>
+              <p class="meta">Market Square, opens 12:00 pm</p>
+              <div class="ticket-foot"><span class="price">From $10</span><a class="btn btn-small" href="#" data-buy>Get tickets</a></div>
+            </div>
+          </article>
+
+        </div>
+        <p class="empty">No events in this category yet. Try another one.</p>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container">
+        <h2>Hosting something? List it here.</h2>
+        <a class="btn" href="contact.html">Talk to us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>AdmitOne</a>
+          <p>Tickets for live events, made simple.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© <span class="year">2026</span> AdmitOne. Group project.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
